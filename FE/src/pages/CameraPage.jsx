@@ -1,4 +1,3 @@
-// src/pages/CameraPage.jsx
 
 import { useState, useRef, useEffect } from "react"
 import CameraView from "../components/CameraView"
@@ -168,14 +167,11 @@ export default function CameraPage() {
         return
       }
 
-      canvas.width =
-        video.videoWidth
+      canvas.width = video.videoWidth
 
-      canvas.height =
-        video.videoHeight
+      canvas.height = video.videoHeight
 
-      const ctx =
-        canvas.getContext("2d")
+      const ctx = canvas.getContext("2d")
 
       ctx.drawImage(
         video,

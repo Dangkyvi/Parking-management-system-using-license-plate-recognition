@@ -52,7 +52,7 @@ def decode_detection(
         if conf < conf_thres:
             continue
 
-        # bbox
+
         x_center, y_center, w, h = pred[:4]
 
         x_center = (x_center - dw) / r
@@ -74,7 +74,7 @@ def decode_detection(
             int(h)
         ]
 
-        # 4 góc
+
         points = np.array([
 
             [pred[5], pred[6]],

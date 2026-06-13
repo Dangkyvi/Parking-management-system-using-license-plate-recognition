@@ -75,16 +75,16 @@ def crop_plate(image, points):
 
     points = points.astype(np.float32)
 
-    # 4 góc
+
     tl, tr, br, bl = points
 
-    # width thật
+
     width_top = np.linalg.norm(tr - tl)
     width_bottom = np.linalg.norm(br - bl)
 
     max_width = int(max(width_top, width_bottom))
 
-    # height thật
+
     height_left = np.linalg.norm(bl - tl)
     height_right = np.linalg.norm(br - tr)
 
